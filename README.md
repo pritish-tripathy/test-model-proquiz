@@ -1,9 +1,14 @@
 - ### Creating the SQL Database
 ```CREATE DATABASE quizprodb;```
 
-- ### Inserting a Record
+- ### Inserting a Teacher Record
 ```
 INSERT INTO myusers (user_id, city, email, password, role, username) VALUES (101, 'blr', 'myexample@mailinator.com', 'hello', 'teacher', 'Pritish Tripathy');
+```
+
+- ### Inserting a Student Record
+```
+INSERT INTO myusers (user_id, city, email, password, role, username) VALUES (110, 'blr', 'mystudent@mailinator.com', 'myhello', 'student', 'Sumit Singh');
 ```
 
 - ### Inserting A Course
