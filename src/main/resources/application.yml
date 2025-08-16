@@ -1,0 +1,48 @@
+server:
+  port: 8876
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+        web.servlet.view: TRACE
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: netproductionsinc888@gmail.com
+    password: cnie pitt apuk xemp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+  datasource:
+    url: jdbc:h2:file:./data/quizprodb;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  mvc:
+    view:
+      prefix: /WEB-INF/myjsps/
+      suffix: .jsp
