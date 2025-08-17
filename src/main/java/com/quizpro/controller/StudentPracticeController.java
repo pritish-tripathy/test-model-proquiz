@@ -73,7 +73,7 @@ public class StudentPracticeController {
         return "PracticeInstructions";
     }
 
-    // Start the test (initialize session state and redirect to first question)
+    // Start the test
     @PostMapping("/practice/start")
     public String startPractice(@RequestParam("courseId") Long courseId,
                                 @RequestParam("topicId") Long topicId,

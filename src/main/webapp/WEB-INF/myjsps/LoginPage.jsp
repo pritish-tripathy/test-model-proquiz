@@ -33,6 +33,7 @@ body {
 	max-width: 400px;
 	width: 100%;
 	margin-top: 60px;
+	margin-bottom: 80px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 12px;
 }

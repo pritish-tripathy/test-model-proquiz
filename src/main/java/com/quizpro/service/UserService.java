@@ -38,7 +38,7 @@ public class UserService {
 	public void sendEmail(String to, String otp) {
 		String from = "netproductionsinc888@gmail.com";
 		String subject = "QuizPro OTP Code";
-		String body = "Your QuizPro OTP Code is "+otp+" Thank You";
+		String body = "Your QuizPro OTP Code is: "+otp+"\n Thank You";
 		mailService.sendMail(from, to, subject, body);
 	}
 	

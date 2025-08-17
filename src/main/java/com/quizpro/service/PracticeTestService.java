@@ -22,11 +22,9 @@ public class PracticeTestService {
     @Autowired
     private PracticeTestResultDAO resultDAO;
 
-    // fetch all Courses from existing DAO via QuizService (reuse your service)
     @Autowired
     private QuizService quizService;
 
-    // Pull all questions for a course + topic in order (no pagination)
     public List<Question> getAllQuestionsForTopic(Long courseId, Long topicId) {
         long total = questionDAO.countQuestionsByCourseAndTopic(courseId, topicId);
         return questionDAO.getQuestionsWithOptionsByCourseAndTopic(courseId, topicId, 0, (int) total);
@@ -56,7 +54,6 @@ public class PracticeTestService {
                 ? "CORRECT" : "INCORRECT");
         result.getQuestionWiseResult().add(qr);
 
-        // update marks
         int current = Optional.ofNullable(result.getMarksObtained()).orElse(0);
         if ("CORRECT".equals(qr.getStatus())) {
             result.setMarksObtained(current + 1);

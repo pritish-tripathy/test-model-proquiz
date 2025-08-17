@@ -86,9 +86,9 @@ public class UserController {
 
 	    boolean updated = userService.updatePassword(userIdOrUsername, newPassword);
 	    if (updated) {
-	        request.setAttribute("msg", "Password successfully updated.");
+	        request.setAttribute("msg", "Password Successfully Updated.");
 	    } else {
-	        request.setAttribute("errorMsg", "Failed to update password. User not found.");
+	        request.setAttribute("errorMsg", "Failed to Update Password. User not Found.");
 	    }
 	    return "ResetPassword";
 	}
