@@ -41,6 +41,20 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
+        
+#   datasource:
+#    url: jdbc:mysql://localhost:8100/quizprodb?useSSL=false
+#    username: root
+#    password: password
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
 
   mvc:
     view:
